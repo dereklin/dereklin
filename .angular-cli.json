@@ -5,7 +5,14 @@
     "npmScope": "dereklin",
     "latestMigration": "20171213-update-tsconfig-spec-to-exclude-e2e"
   },
-  "apps": [],
+  "apps": [
+    {
+      "name": "helloutils",
+      "root": "libs/helloutils/src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    }
+  ],
   "e2e": {
     "protractor": {
       "config": "./protractor.conf.js"
@@ -26,7 +33,10 @@
     "schematics": {
       "collection": "@nrwl/schematics",
       "postGenerate": "npm run format",
-      "newProject": ["app", "lib"]
+      "newProject": [
+        "app",
+        "lib"
+      ]
     },
     "styleExt": "css",
     "component": {}
